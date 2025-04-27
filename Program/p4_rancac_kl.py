@@ -17,7 +17,7 @@ def is_vertical(normal, tolerance=10):
 points = load_xyz('dane_xyz/horizontal_plane.xyz')
 ##points = load_xyz('dane_xyz/cylinder.xyz')
 ##points = load_xyz('dane_xyz/vertical_plane.xyz.xyz')
-2
+
 kmeans = KMeans(n_clusters=3, random_state=0).fit(points)
 labels = kmeans.labels_
 

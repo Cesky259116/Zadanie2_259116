@@ -12,12 +12,12 @@ def is_vertical(normal, tolerance=10):
     angle = np.degrees(np.arccos(xy_norm))
     return angle < tolerance
 
-# points = load_xyz('dane_xyz/cylinder.xyz')
+#points = load_xyz('dane_xyz/cylinder.xyz')
 points = load_xyz('dane_xyz/horizontal_plane.xyz')
-# points = load_xyz('dane_xyz/vertical_plane.xyz.xyz')
+#points = load_xyz('dane_xyz/vertical_plane.xyz.xyz')
 
 # Klastrowanie za pomocą DBSCAN
-dbscan = DBSCAN(eps=0.15, min_samples=40).fit(points)  # Zwiększenie eps i min_samples
+dbscan = DBSCAN(eps=0.15, min_samples=40).fit(points)
 labels = dbscan.labels_
 
 plane_model = Plane()
